@@ -3,7 +3,6 @@
 #include <cstdint>
 #include <string_view>
 #include <array>
-#include <cstdint>
 
 class Cards{
 public:
@@ -11,25 +10,25 @@ public:
     /* Defining the 52-deck of cards */
 
     // Defining card ranks
-    static constexpr std::uint8_t Ace       = 0x7F;
-    static constexpr std::uint8_t King      = 0x6E;
-    static constexpr std::uint8_t Queen     = 0x5D;
-    static constexpr std::uint8_t Jack      = 0x4C;
-    static constexpr std::uint8_t Ten       = 0x3B;
-    static constexpr std::uint8_t Nine      = 0x2A;
-    static constexpr std::uint8_t Eight     = 0x19;
-    static constexpr std::uint8_t Seven     = 0x08;
-    static constexpr std::uint8_t Six       = 0x07;
-    static constexpr std::uint8_t Five      = 0x06;
-    static constexpr std::uint8_t Four      = 0x05;
-    static constexpr std::uint8_t Three     = 0x04;
-    static constexpr std::uint8_t Two       = 0x03;
+    static constexpr std::uint8_t Ace       = 0x0D;
+    static constexpr std::uint8_t King      = 0x0C;
+    static constexpr std::uint8_t Queen     = 0x0B;
+    static constexpr std::uint8_t Jack      = 0x0A;
+    static constexpr std::uint8_t Ten       = 0x09;
+    static constexpr std::uint8_t Nine      = 0x08;
+    static constexpr std::uint8_t Eight     = 0x07;
+    static constexpr std::uint8_t Seven     = 0x06;
+    static constexpr std::uint8_t Six       = 0x05;
+    static constexpr std::uint8_t Five      = 0x04;
+    static constexpr std::uint8_t Four      = 0x03;
+    static constexpr std::uint8_t Three     = 0x02;
+    static constexpr std::uint8_t Two       = 0x01;
 
     // Defining suits as 4-bit upper identifiers
-    static constexpr std::uint8_t Hearts            = 0x09;
-    static constexpr std::uint8_t Diamonds          = 0x0A;
-    static constexpr std::uint8_t Clubs             = 0x0B;
-    static constexpr std::uint8_t Spades            = 0x0C;
+    static constexpr std::uint8_t Hearts            = 0x10;
+    static constexpr std::uint8_t Diamonds          = 0x20;
+    static constexpr std::uint8_t Clubs             = 0x30;
+    static constexpr std::uint8_t Spades            = 0x40;
 
     // Mapping back to human-readable names 
     static constexpr std::array<std::string_view, 13> Names = {

@@ -14,11 +14,11 @@ class PlayerSets{
 public:
 
     // max amount of cards per player (e.g., 2 for Hold'em)
-    static constexpr std::size_t Max_amount_of_cards_per_player = 2;
+    static constexpr std::size_t MaxCardsPerPlayer = 2;
 
     // type aliases for Clarity 
     using Card = std::uint8_t;
-    using Hand = std::array<Card, Max_amount_of_cards_per_player>;
+    using Hand = std::array<Card, MaxCardsPerPlayer>;
     
     // Mapping: Player ID -> their hand
     std::array<Hand, 9> playerHands;

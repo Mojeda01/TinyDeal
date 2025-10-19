@@ -3,15 +3,16 @@
 #include "cards.h"
 #include "playerSets.h"
 
-#include <iostream>
 #include <cstddef>
 #include <cstdint>
 #include <vector>
+#include <array>
+#include <memory>
 
 namespace GameLogic{
 
 // shared game base for N-player poker-like games 
-class Game_Base{
+class GameBase{
 public:
     using Card = std::uint8_t;
     using Hand = Player_Structure::PlayerSets::Hand;
@@ -31,12 +32,12 @@ protected:
     Player_Structure::PlayerSets players_; // owns playerHands
     std::vector<Card> deck_;
     struct RNGImpl; // RNG kept per-table 
-    RNGImpl * rng_; 
+    std::unique_ptr<RNGImpl> rng_; 
     std::size_t playerCount_ = 0; // fixed per derived game 
 
 };
 
-class Game_Logic{
+class GameLogic{
 public:
     GameLogic() = default;
     virtual ~GameLogic() = default;
