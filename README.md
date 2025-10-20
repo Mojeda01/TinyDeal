@@ -1,4 +1,4 @@
-# tinyDeal
+# TinyDeal
 
 [![Website](https://img.shields.io/badge/website-marco--oj.no-2ea44f?style=for-the-badge)](https://marco-oj.no)
 
